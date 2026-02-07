@@ -42,6 +42,20 @@
 
     ./install-mlflow.sh
 
+### UI
+
+#### dashboard
+
+    minikube dashboard
+
+[broswer : UI](http://127.0.0.1:34279/api/v1/namespaces/kubernetes-dashboard/services/http:kubernetes-dashboard:/proxy/)
+
+#### mlflow
+
+    kubectl -n mlflow-system port-forward svc/mlflow-tracking 5000:80
+
+[browser: UI](http://127.0.0.1:5000/)
+
 ## RESTART NeMo operator
 
     kubectl rollout restart deployment/nemo-nemo-operator-controller-manager
