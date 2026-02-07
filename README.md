@@ -20,8 +20,7 @@
     -n volcano-system --create-namespace
 
 ### NeMo
-
-    export NGC_API_KEY="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"         
+        
     export NVIDIA_API_KEY="$NGC_API_KEY"  
 
     kubectl create secret generic ngc-api --from-literal=NGC_API_KEY="$NGC_API_KEY"
